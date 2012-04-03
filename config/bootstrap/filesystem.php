@@ -7,17 +7,14 @@
  */
 
 use li3_filesystem\storage\FileSystem;
-use lithium\core\Libraries;
 
 FileSystem::config(array(
-    'default' => array(
-        'adapter' => 'File',
-        'strategies' => array(
-        	'FileUpload' => array(
-				'allowed' => array('png', 'jpg'),	
-			),
-		),
-        'path' => Libraries::get(true, 'path') . '/webroot/img'
-    ),
+	'default' => array(
+		'adapter' => 'S3',
+		'key' => 'AKIAJVZ2X5TECEGEEICA',
+		'secret' => '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',
+		'bucket' => 'danielmcormond'
+	)
 ));
+
 ?>
